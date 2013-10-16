@@ -1,7 +1,7 @@
 {
   "name": "node-logstash",
   "description": "Logstash implementation in node JS",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "author": "Bertrand Paquet <bertrand.paquet@gmail.com>",
   "keywords": ["logstash", "log", "zmq", "zeromq"],
   "main": "./lib/log4node.js",
@@ -17,7 +17,8 @@
     }
   ],
   "devDependencies": {
-    "vows": "0.6.x",
+    "vows": "0.7.0",
+    "vows-batch-retry": "0.0.4",
     "whereis": "0.0.2"
   },
   "scripts": {
@@ -26,19 +27,22 @@
     "uninstall": "node_modules\\.bin\\winser -r"
   },
   "dependencies": {
-    "log4node": "0.1.0",
-    "optimist": "0.3.4",
+    "log4node": "0.1.2",
+    "optimist": "0.3.4"
+  },
+  "optionalDependencies":{
+    "zmq": "2.3.x",
     "moment": "1.7.0",
-    "glob": "3.1.14",
-	"tail": "0.2.4",
-	"linestream": "0.3.2",
-	"rabbit.js": "0.2.0",
-	"winser": "0.0.12",
-	"tedious": "0.0.7"
+    "redis": "0.8.x",
+    "msgpack": "0.1.8",
+    "tail": "0.2.x"
+    "linestream": "0.3.x",
+    "rabbit.js": "0.2.x",
+    "winser": "0.0.x",
+    "tedious": "0.0.x"
   },
   "directories": {
     "test": "./test",
     "bin": "./bin"
-  },
-  "engines": { "node": ">= 0.8.0" }
+  }
 }
